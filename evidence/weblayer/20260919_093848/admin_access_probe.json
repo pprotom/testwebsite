@@ -1,0 +1,54 @@
+{
+  "/admin": {
+    "url": "https://example.com/admin",
+    "status_code": 404,
+    "headers": {
+      "Date": "Sat, 19 Sep 2026 09:39:00 GMT",
+      "Content-Type": "text/html",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "Age": "14194"
+    },
+    "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me"
+  },
+  "/admin/": {
+    "url": "https://example.com/admin/",
+    "status_code": 404,
+    "headers": {
+      "Date": "Sat, 19 Sep 2026 09:39:00 GMT",
+      "Content-Type": "text/html",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "Age": "14194"
+    },
+    "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me"
+  },
+  "/administrator": {
+    "url": "https://example.com/administrator",
+    "status_code": 404,
+    "headers": {
+      "Date": "Sat, 19 Sep 2026 09:39:00 GMT",
+      "Content-Type": "text/html",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "Age": "14194"
+    },
+    "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me"
+  },
+  "/dashboard": {
+    "url": "https://example.com/dashboard",
+    "status_code": 404,
+    "headers": {
+      "Date": "Sat, 19 Sep 2026 09:39:00 GMT",
+      "Content-Type": "text/html",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "Age": "14194"
+    },
+    "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "domain": "example.com",
+  "date": "2026-09-18 10:00:00",
+  "verdict": "NOT PASS",
+  "coverage_pct": 75.0,
+  "summary": {
+    "pass": 15,
+    "fail": 3,
+    "unknown": 2,
+    "total": 20
+  },
+  "items": [
+    {
+      "id": "1.1",
+      "module": "recon",
+      "check": "Domain and IP Scope Verification",
+      "status": "PASS",
+      "score": 2,
+      "evidence": ["evidence/recon/dns_resolve.json"],
+      "note": "Domain in scope"
+    },
+    {
+      "id": "1.3",
+      "module": "recon",
+      "check": "Database Service Port Exposure",
+      "status": "FAIL",
+      "score": 0,
+      "evidence": ["evidence/recon/nmap.txt"],
+      "note": "CRITICAL P0: Database port 3306 exposed"
+    },
+    {
+      "id": "3.1",
+      "module": "weblayer",
+      "check": "Mandatory Security Headers",
+      "status": "FAIL",
+      "score": 0,
+      "evidence": ["evidence/weblayer/headers.json"],
+      "note": "Missing CSP, HSTS"
+    }
+  ],
+  "findings": [
+    {
+      "title": "Database Port Exposed",
+      "severity": "P0",
+      "affected": "3306/tcp",
+      "evidence": ["evidence/recon/nmap.txt"],
+      "reproduce": "nmap -p 3306 93.184.216.34",
+      "impact": "Direct DB breach",
+      "remediation": "Close port 3306"
+    }
+  ],
+  "limitations": ["Safe mode enabled"],
+  "commands_run": ["nmap -sV -T4 example.com"]
+}

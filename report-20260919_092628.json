@@ -1,0 +1,113 @@
+{
+  "domain": "example.com",
+  "date": "2026-09-19 09:26:28",
+  "verdict": "NOT PASS",
+  "coverage_pct": 66.67,
+  "summary": {
+    "pass": 4,
+    "fail": 2,
+    "unknown": 0,
+    "total": 6
+  },
+  "items": [
+    {
+      "id": "3.1",
+      "module": "weblayer",
+      "check": "Mandatory Security Headers (CSP, HSTS, XFO, XCTO, Referrer)",
+      "status": "FAIL",
+      "score": 0,
+      "evidence": [
+        "evidence/weblayer/20260919_092628/security_headers_probe.json"
+      ],
+      "note": "Missing or misconfigured security headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, Referrer-Policy"
+    },
+    {
+      "id": "3.2",
+      "module": "weblayer",
+      "check": "HTTP to HTTPS Enforced Redirection",
+      "status": "FAIL",
+      "score": 0,
+      "evidence": [
+        "evidence/weblayer/20260919_092628/http_redirect.json"
+      ],
+      "note": "Insecure connection: HTTP does not redirect to HTTPS (Status 200)"
+    },
+    {
+      "id": "3.3",
+      "module": "weblayer",
+      "check": "Modern TLS Encryption (No TLS 1.0/1.1)",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_092628/tls_ciphers.txt"
+      ],
+      "note": "Modern TLS enforced (No obsolete TLS 1.0/1.1 detected)"
+    },
+    {
+      "id": "3.4",
+      "module": "weblayer",
+      "check": "Session Cookie Security Attributes (Secure, HttpOnly, SameSite)",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_092628/cookies_audit.json"
+      ],
+      "note": "All examined cookies have appropriate security flags or no session cookies set."
+    },
+    {
+      "id": "3.5",
+      "module": "weblayer",
+      "check": "SQL Injection Pilot Non-Destructive Probe",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_092628/sqli_pilot_probe.json"
+      ],
+      "note": "No SQL injection leads or error differentials detected on test parameters."
+    },
+    {
+      "id": "3.6",
+      "module": "weblayer",
+      "check": "Unauthenticated Administrative Interface Access",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_092628/admin_access_probe.json"
+      ],
+      "note": "No unauthenticated admin interface exposure detected."
+    }
+  ],
+  "findings": [
+    {
+      "title": "Missing Essential HTTP Security Headers",
+      "severity": "P2",
+      "affected": "https://example.com",
+      "evidence": [
+        "evidence/weblayer/20260919_092628/security_headers_probe.json"
+      ],
+      "reproduce": "curl -sI https://example.com",
+      "impact": "Exposes users to clickjacking, cross-site scripting (XSS), and protocol downgrade attacks.",
+      "remediation": "Implement missing security headers on web server or CDN: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, Referrer-Policy."
+    },
+    {
+      "title": "Unenforced HTTPS Encryption (No Automatic Redirect)",
+      "severity": "P0",
+      "affected": "http://example.com/",
+      "evidence": [
+        "evidence/weblayer/20260919_092628/http_redirect.json"
+      ],
+      "reproduce": "curl -sI http://example.com/",
+      "impact": "Unencrypted HTTP traffic allows man-in-the-middle (MITM) eavesdropping and session hijacking.",
+      "remediation": "Configure 301 redirect from HTTP to HTTPS in server configuration."
+    }
+  ],
+  "limitations": [
+    "Authorized Scope restricted to: example.com, www.example.com",
+    "Command Timeout enforced at <= 60s",
+    "Safe Mode is ACTIVE (non-destructive)",
+    "Port scan capped at 1000 ports without interactive confirmation"
+  ],
+  "commands_run": [
+    "nmap --script ssl-enum-ciphers -p 443 example.com -oN evidence/weblayer/20260919_092628/tls_ciphers.txt"
+  ]
+}

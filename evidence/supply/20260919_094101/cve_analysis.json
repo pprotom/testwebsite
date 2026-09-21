@@ -1,0 +1,7 @@
+{
+  "detected_tech": [
+    "cloudflare"
+  ],
+  "cve_findings": [],
+  "manual_review_required": true
+}

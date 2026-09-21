@@ -1,0 +1,62 @@
+{
+  "session_timestamp": "20260919_093916",
+  "created_at": "2026-09-19T09:39:16.877990",
+  "files": [
+    {
+      "module": "recon",
+      "filename": "dns_resolve.json",
+      "relative_path": "evidence/recon/20260919_093916/dns_resolve.json",
+      "sha256": "5e7ae5a1a99da2bc675f7bcb6557902fba3dfe92875c5e3b6d7adea70c32b4a4",
+      "size_bytes": 153,
+      "saved_at": "2026-09-19T09:39:16.880053"
+    },
+    {
+      "module": "recon",
+      "filename": "ports_fallback.json",
+      "relative_path": "evidence/recon/20260919_093916/ports_fallback.json",
+      "sha256": "4ecad3372fe1214f47f6a34648a270b868d76b8927806ede1fe48625ffb3d6e5",
+      "size_bytes": 419,
+      "saved_at": "2026-09-19T09:39:27.907983"
+    },
+    {
+      "module": "recon",
+      "filename": "subdomains.txt",
+      "relative_path": "evidence/recon/20260919_093916/subdomains.txt",
+      "sha256": "9891335b85f63c79455210f7c2ebd15b8417fc2c05872917d0092518aad34759",
+      "size_bytes": 28,
+      "saved_at": "2026-09-19T09:39:27.908698"
+    },
+    {
+      "module": "recon",
+      "filename": "waf.txt",
+      "relative_path": "evidence/recon/20260919_093916/waf.txt",
+      "sha256": "d2e33a398110ceb006b7dae05cc8b0e5111bf6017ada300fc0b1b16313e65e06",
+      "size_bytes": 12,
+      "saved_at": "2026-09-19T09:39:27.909526"
+    },
+    {
+      "module": "recon",
+      "filename": "recon_summary.json",
+      "relative_path": "evidence/recon/20260919_093916/recon_summary.json",
+      "sha256": "91f9243b5122cc272b9b8f233d50d28e9de9a84fab97dffa2a5a70ce88636511",
+      "size_bytes": 1260,
+      "saved_at": "2026-09-19T09:39:27.910119"
+    },
+    {
+      "module": "files",
+      "filename": "dirsearch.txt",
+      "relative_path": "evidence/files/20260919_093916/dirsearch.txt",
+      "sha256": "f32bb4fb7df164bc171c28811e6a31577da31ec3a9a788baa2dbf9682d089038",
+      "size_bytes": 155,
+      "saved_at": "2026-09-19T09:39:27.912654"
+    },
+    {
+      "module": "files",
+      "filename": "sensitive_paths_probe.json",
+      "relative_path": "evidence/files/20260919_093916/sensitive_paths_probe.json",
+      "sha256": "ac18b14b805b32944f2a363f39639d72f58e812a115e36aa258cd6f82ab1de7e",
+      "size_bytes": 5408,
+      "saved_at": "2026-09-19T09:39:28.376933"
+    }
+  ]
+}

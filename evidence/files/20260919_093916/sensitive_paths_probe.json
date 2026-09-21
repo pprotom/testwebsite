@@ -1,0 +1,116 @@
+{
+  "/.git/config": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/.git/HEAD": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/.env": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/.env.backup": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/.env.production": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/db.sql": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/backup.zip": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/dump.rar": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/site.tar.gz": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/composer.json": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/package.json": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/config.php": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/wp-config.php.bak": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/admin": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/phpmyadmin": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/uploads/": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/storage/": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/logs/": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  },
+  "/api/docs": {
+    "status_code": 404,
+    "content_length": 559,
+    "content_type": "text/html",
+    "snippet": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><meta name=\"viewport\" content=\"width=device-width, in"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "session_timestamp": "20260919_092628",
+  "created_at": "2026-09-19T09:26:28.251322",
+  "files": [
+    {
+      "module": "weblayer",
+      "filename": "security_headers_probe.json",
+      "relative_path": "evidence/weblayer/20260919_092628/security_headers_probe.json",
+      "sha256": "ea0625a7011bae9a932c4fee3b3b171f0628c087e249013cb399b31b4eb65560",
+      "size_bytes": 1404,
+      "saved_at": "2026-09-19T09:26:28.348813"
+    },
+    {
+      "module": "weblayer",
+      "filename": "http_redirect.json",
+      "relative_path": "evidence/weblayer/20260919_092628/http_redirect.json",
+      "sha256": "8e13a972714f9b98d29eea1a89716c86ef6270f4302e2ed7a9a8df9b4a133439",
+      "size_bytes": 602,
+      "saved_at": "2026-09-19T09:26:28.369278"
+    },
+    {
+      "module": "weblayer",
+      "filename": "tls_ciphers.txt",
+      "relative_path": "evidence/weblayer/20260919_092628/tls_ciphers.txt",
+      "sha256": "5f23fcbd9ba1793b77b63f5696bcc998057ff447e559ea7d0bfb01866d0513d2",
+      "size_bytes": 45,
+      "saved_at": "2026-09-19T09:26:28.383879"
+    },
+    {
+      "module": "weblayer",
+      "filename": "cookies_audit.json",
+      "relative_path": "evidence/weblayer/20260919_092628/cookies_audit.json",
+      "sha256": "783b4cca939b493b8e12982492dbdfae97f88c1ebd0a7402feeefee8cf4675c5",
+      "size_bytes": 82,
+      "saved_at": "2026-09-19T09:26:28.404640"
+    },
+    {
+      "module": "weblayer",
+      "filename": "sqli_pilot_probe.json",
+      "relative_path": "evidence/weblayer/20260919_092628/sqli_pilot_probe.json",
+      "sha256": "122fdcadd5bf36156565f6ae8251aa0e1d7a9acc26029d66f4bcdcf3c111ee8d",
+      "size_bytes": 4963,
+      "saved_at": "2026-09-19T09:26:34.921717"
+    },
+    {
+      "module": "weblayer",
+      "filename": "admin_access_probe.json",
+      "relative_path": "evidence/weblayer/20260919_092628/admin_access_probe.json",
+      "sha256": "b05d629f93f90cf82010253b5c0bb21c151968a62e532ffbb5afa4bc111b53c2",
+      "size_bytes": 1800,
+      "saved_at": "2026-09-19T09:26:34.993339"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mode": "live_web_frontend_script_audit",
+  "total_scripts_detected": 0,
+  "scripts": [],
+  "insecure_http_scripts": [],
+  "external_cdn_missing_sri": []
+}

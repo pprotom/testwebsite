@@ -1,0 +1,46 @@
+{
+  "headers": {
+    "Date": "Sat, 19 Sep 2026 09:41:12 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "cloudflare",
+    "last-modified": "Tue, 15 Sep 2026 23:38:37 GMT",
+    "allow": "GET, HEAD",
+    "Age": "5728",
+    "cf-cache-status": "HIT",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "a3d7a2238d5d56f5-TPE"
+  },
+  "missing": [
+    "Content-Security-Policy",
+    "Strict-Transport-Security",
+    "X-Frame-Options",
+    "X-Content-Type-Options",
+    "Referrer-Policy"
+  ],
+  "sample_snippet": {
+    "url": "https://example.com",
+    "status_code": 200,
+    "request_headers": {
+      "User-Agent": "Mozilla/5.0 (compatible; WebSecurityAuditor/1.0)",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept": "*/*",
+      "Connection": "keep-alive"
+    },
+    "response_headers": {
+      "Date": "Sat, 19 Sep 2026 09:41:12 GMT",
+      "Content-Type": "text/html",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "last-modified": "Tue, 15 Sep 2026 23:38:37 GMT",
+      "allow": "GET, HEAD",
+      "Age": "5728",
+      "cf-cache-status": "HIT",
+      "Content-Encoding": "gzip",
+      "CF-RAY": "a3d7a2238d5d56f5-TPE"
+    },
+    "body_first_100_bytes": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me"
+  }
+}

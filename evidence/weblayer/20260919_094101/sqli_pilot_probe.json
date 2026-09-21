@@ -1,0 +1,132 @@
+[
+  {
+    "param": "id",
+    "results": {
+      "baseline": {
+        "url": "https://example.com?id=1",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:12 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:41:26 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      },
+      "quote": {
+        "url": "https://example.com?id=1%27",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:13 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:41:26 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      },
+      "true_cond": {
+        "url": "https://example.com?id=1+AND+1%3D1",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:13 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:41:26 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      },
+      "false_cond": {
+        "url": "https://example.com?id=1+AND+1%3D2",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:13 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:38:37 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      }
+    }
+  },
+  {
+    "param": "query",
+    "results": {
+      "baseline": {
+        "url": "https://example.com?query=1",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:13 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:38:37 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      },
+      "quote": {
+        "url": "https://example.com?query=1%27",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:13 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:38:37 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      },
+      "true_cond": {
+        "url": "https://example.com?query=1+AND+1%3D1",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:13 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:41:26 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      },
+      "false_cond": {
+        "url": "https://example.com?query=1+AND+1%3D2",
+        "status_code": 200,
+        "content_length": 559,
+        "header_snippet": {
+          "Date": "Sat, 19 Sep 2026 09:41:13 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "last-modified": "Tue, 15 Sep 2026 23:41:26 GMT"
+        },
+        "body_first_100": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me",
+        "has_sql_error": false
+      }
+    }
+  }
+]

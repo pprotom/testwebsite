@@ -1,0 +1,6 @@
+{
+  "name": "Website Security Auditor",
+  "description": "Automated website security auditing tool for Linux with 5-module verification, OWASP Top 10 (2021) compliance matrix, evidence hashing, safety controls, and delta reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

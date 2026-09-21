@@ -1,0 +1,126 @@
+{
+  "session_timestamp": "20260919_093916",
+  "created_at": "2026-09-19T09:39:16.877990",
+  "files": [
+    {
+      "module": "recon",
+      "filename": "dns_resolve.json",
+      "relative_path": "evidence/recon/20260919_093916/dns_resolve.json",
+      "sha256": "5e7ae5a1a99da2bc675f7bcb6557902fba3dfe92875c5e3b6d7adea70c32b4a4",
+      "size_bytes": 153,
+      "saved_at": "2026-09-19T09:39:16.880053"
+    },
+    {
+      "module": "recon",
+      "filename": "ports_fallback.json",
+      "relative_path": "evidence/recon/20260919_093916/ports_fallback.json",
+      "sha256": "4ecad3372fe1214f47f6a34648a270b868d76b8927806ede1fe48625ffb3d6e5",
+      "size_bytes": 419,
+      "saved_at": "2026-09-19T09:39:27.907983"
+    },
+    {
+      "module": "recon",
+      "filename": "subdomains.txt",
+      "relative_path": "evidence/recon/20260919_093916/subdomains.txt",
+      "sha256": "9891335b85f63c79455210f7c2ebd15b8417fc2c05872917d0092518aad34759",
+      "size_bytes": 28,
+      "saved_at": "2026-09-19T09:39:27.908698"
+    },
+    {
+      "module": "recon",
+      "filename": "waf.txt",
+      "relative_path": "evidence/recon/20260919_093916/waf.txt",
+      "sha256": "d2e33a398110ceb006b7dae05cc8b0e5111bf6017ada300fc0b1b16313e65e06",
+      "size_bytes": 12,
+      "saved_at": "2026-09-19T09:39:27.909526"
+    },
+    {
+      "module": "recon",
+      "filename": "recon_summary.json",
+      "relative_path": "evidence/recon/20260919_093916/recon_summary.json",
+      "sha256": "91f9243b5122cc272b9b8f233d50d28e9de9a84fab97dffa2a5a70ce88636511",
+      "size_bytes": 1260,
+      "saved_at": "2026-09-19T09:39:27.910119"
+    },
+    {
+      "module": "files",
+      "filename": "dirsearch.txt",
+      "relative_path": "evidence/files/20260919_093916/dirsearch.txt",
+      "sha256": "f32bb4fb7df164bc171c28811e6a31577da31ec3a9a788baa2dbf9682d089038",
+      "size_bytes": 155,
+      "saved_at": "2026-09-19T09:39:27.912654"
+    },
+    {
+      "module": "files",
+      "filename": "sensitive_paths_probe.json",
+      "relative_path": "evidence/files/20260919_093916/sensitive_paths_probe.json",
+      "sha256": "ac18b14b805b32944f2a363f39639d72f58e812a115e36aa258cd6f82ab1de7e",
+      "size_bytes": 5408,
+      "saved_at": "2026-09-19T09:39:28.376933"
+    },
+    {
+      "module": "weblayer",
+      "filename": "security_headers_probe.json",
+      "relative_path": "evidence/weblayer/20260919_093916/security_headers_probe.json",
+      "sha256": "14c32d70753c101ff1b10b068918040ffee59557ad0a81c752bc6544ce680045",
+      "size_bytes": 1404,
+      "saved_at": "2026-09-19T09:39:28.487499"
+    },
+    {
+      "module": "weblayer",
+      "filename": "http_redirect.json",
+      "relative_path": "evidence/weblayer/20260919_093916/http_redirect.json",
+      "sha256": "f2c018e7e1faefd676c130a16eb4c35f00071b9c2fd7d9c38df56dbef2266c1c",
+      "size_bytes": 602,
+      "saved_at": "2026-09-19T09:39:28.506934"
+    },
+    {
+      "module": "weblayer",
+      "filename": "tls_ciphers.txt",
+      "relative_path": "evidence/weblayer/20260919_093916/tls_ciphers.txt",
+      "sha256": "5f23fcbd9ba1793b77b63f5696bcc998057ff447e559ea7d0bfb01866d0513d2",
+      "size_bytes": 45,
+      "saved_at": "2026-09-19T09:39:28.522012"
+    },
+    {
+      "module": "weblayer",
+      "filename": "cookies_audit.json",
+      "relative_path": "evidence/weblayer/20260919_093916/cookies_audit.json",
+      "sha256": "783b4cca939b493b8e12982492dbdfae97f88c1ebd0a7402feeefee8cf4675c5",
+      "size_bytes": 82,
+      "saved_at": "2026-09-19T09:39:28.541691"
+    },
+    {
+      "module": "weblayer",
+      "filename": "sqli_pilot_probe.json",
+      "relative_path": "evidence/weblayer/20260919_093916/sqli_pilot_probe.json",
+      "sha256": "bc940932314d0b192911ea0fe2e50bcfb3207bd7b85cd3158ad1d53c95176502",
+      "size_bytes": 4963,
+      "saved_at": "2026-09-19T09:39:28.717873"
+    },
+    {
+      "module": "weblayer",
+      "filename": "admin_access_probe.json",
+      "relative_path": "evidence/weblayer/20260919_093916/admin_access_probe.json",
+      "sha256": "9372c5a76fdf2624bf7763998f8acc03c1233785cbd146ebf751fd220cb645d5",
+      "size_bytes": 1800,
+      "saved_at": "2026-09-19T09:39:28.794184"
+    },
+    {
+      "module": "infra",
+      "filename": "dbports_socket.json",
+      "relative_path": "evidence/infra/20260919_093916/dbports_socket.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "saved_at": "2026-09-19T09:39:40.804980"
+    },
+    {
+      "module": "infra",
+      "filename": "crawler_directives.json",
+      "relative_path": "evidence/infra/20260919_093916/crawler_directives.json",
+      "sha256": "e836a767d2fe540d219a88ae907c05a9d275713b5f0410fa6a3f65e555230a05",
+      "size_bytes": 70,
+      "saved_at": "2026-09-19T09:39:40.896740"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "domain": "example.com",
+  "resolved_ip": "104.20.23.154",
+  "ports": [
+    {
+      "port": 80,
+      "protocol": "tcp",
+      "service": "open-socket",
+      "version": "unknown"
+    },
+    {
+      "port": 443,
+      "protocol": "tcp",
+      "service": "open-socket",
+      "version": "unknown"
+    },
+    {
+      "port": 8080,
+      "protocol": "tcp",
+      "service": "open-socket",
+      "version": "unknown"
+    },
+    {
+      "port": 8443,
+      "protocol": "tcp",
+      "service": "open-socket",
+      "version": "unknown"
+    }
+  ],
+  "subdomains": [
+    "example.com"
+  ],
+  "tech": [
+    "cloudflare"
+  ],
+  "waf": "Cloudflare Edge / WAF",
+  "db_ports_open": [],
+  "notes": [
+    "Tool 'nmap' is not installed in system. Install command: sudo apt-get install -y nmap",
+    "Tool 'subfinder' is not installed in system. Install command: go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest",
+    "Tool 'httpx' is not installed in system. Install command: go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest"
+  ]
+}

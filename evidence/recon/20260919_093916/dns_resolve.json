@@ -1,0 +1,9 @@
+{
+  "domain": "example.com",
+  "resolved_ip": "172.66.147.243",
+  "in_scope": true,
+  "allowed_domains": [
+    "example.com",
+    "www.example.com"
+  ]
+}

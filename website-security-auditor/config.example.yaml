@@ -1,0 +1,33 @@
+# ==============================================================================
+# website-security-auditor: Example Configuration File (config.example.yaml)
+# ==============================================================================
+
+target:
+  url: "https://example.com"
+  domain: "example.com"
+  allowed_domains:
+    - "example.com"
+    - "www.example.com"
+  login_url: "https://example.com/login"
+  test_params:
+    - "id"
+    - "query"
+  repo_path: ""
+
+execution:
+  safe_mode: true
+  allow_risky: []
+  command_timeout: 60
+  max_concurrency: 3
+  port_scan_limit: 1000
+  confirm_large_port_scan: false
+
+proxy:
+  http_proxy: ""
+  https_proxy: ""
+
+evidence:
+  base_dir: "evidence"
+
+report:
+  output_dir: "."

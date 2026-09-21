@@ -1,0 +1,174 @@
+{
+  "session_timestamp": "20260919_094101",
+  "created_at": "2026-09-19T09:41:01.131889",
+  "files": [
+    {
+      "module": "recon",
+      "filename": "dns_resolve.json",
+      "relative_path": "evidence/recon/20260919_094101/dns_resolve.json",
+      "sha256": "a31f2463b4ad3b468309547576207d8474cb05fb67eb137ec123b6fc71371f3e",
+      "size_bytes": 152,
+      "saved_at": "2026-09-19T09:41:01.133741"
+    },
+    {
+      "module": "recon",
+      "filename": "ports_fallback.json",
+      "relative_path": "evidence/recon/20260919_094101/ports_fallback.json",
+      "sha256": "4ecad3372fe1214f47f6a34648a270b868d76b8927806ede1fe48625ffb3d6e5",
+      "size_bytes": 419,
+      "saved_at": "2026-09-19T09:41:12.163587"
+    },
+    {
+      "module": "recon",
+      "filename": "subdomains.txt",
+      "relative_path": "evidence/recon/20260919_094101/subdomains.txt",
+      "sha256": "9891335b85f63c79455210f7c2ebd15b8417fc2c05872917d0092518aad34759",
+      "size_bytes": 28,
+      "saved_at": "2026-09-19T09:41:12.164307"
+    },
+    {
+      "module": "recon",
+      "filename": "waf.txt",
+      "relative_path": "evidence/recon/20260919_094101/waf.txt",
+      "sha256": "19fd141ac6e24fc9b30320dd7979782348792594bed6016c7b62c8fa532591ce",
+      "size_bytes": 26,
+      "saved_at": "2026-09-19T09:41:12.238016"
+    },
+    {
+      "module": "recon",
+      "filename": "whatweb.txt",
+      "relative_path": "evidence/recon/20260919_094101/whatweb.txt",
+      "sha256": "a0efd52b0a283368faf2f1aa96118532dcb9d1524aed31ed8f31f5ba88a59e1a",
+      "size_bytes": 22,
+      "saved_at": "2026-09-19T09:41:12.316748"
+    },
+    {
+      "module": "recon",
+      "filename": "recon_summary.json",
+      "relative_path": "evidence/recon/20260919_094101/recon_summary.json",
+      "sha256": "2276a475944510b9d5b139794a2d9767ca7def369e2809d13e9a7dd6eb2fb21f",
+      "size_bytes": 1062,
+      "saved_at": "2026-09-19T09:41:12.317138"
+    },
+    {
+      "module": "files",
+      "filename": "dirsearch.txt",
+      "relative_path": "evidence/files/20260919_094101/dirsearch.txt",
+      "sha256": "f32bb4fb7df164bc171c28811e6a31577da31ec3a9a788baa2dbf9682d089038",
+      "size_bytes": 155,
+      "saved_at": "2026-09-19T09:41:12.319204"
+    },
+    {
+      "module": "files",
+      "filename": "sensitive_paths_probe.json",
+      "relative_path": "evidence/files/20260919_094101/sensitive_paths_probe.json",
+      "sha256": "ac18b14b805b32944f2a363f39639d72f58e812a115e36aa258cd6f82ab1de7e",
+      "size_bytes": 5408,
+      "saved_at": "2026-09-19T09:41:12.774100"
+    },
+    {
+      "module": "weblayer",
+      "filename": "security_headers_probe.json",
+      "relative_path": "evidence/weblayer/20260919_094101/security_headers_probe.json",
+      "sha256": "ecb3b897726727a1dc248a0ba5a675ac92fab7182ec3f1ccb56e9fb2a9478447",
+      "size_bytes": 1404,
+      "saved_at": "2026-09-19T09:41:12.887548"
+    },
+    {
+      "module": "weblayer",
+      "filename": "http_redirect.json",
+      "relative_path": "evidence/weblayer/20260919_094101/http_redirect.json",
+      "sha256": "1a5ebb5ba3605aac425998b8747e8c0e05935cb8be1d11e9499237c908bfded8",
+      "size_bytes": 602,
+      "saved_at": "2026-09-19T09:41:12.923170"
+    },
+    {
+      "module": "weblayer",
+      "filename": "tls_ciphers.txt",
+      "relative_path": "evidence/weblayer/20260919_094101/tls_ciphers.txt",
+      "sha256": "5f23fcbd9ba1793b77b63f5696bcc998057ff447e559ea7d0bfb01866d0513d2",
+      "size_bytes": 45,
+      "saved_at": "2026-09-19T09:41:12.941019"
+    },
+    {
+      "module": "weblayer",
+      "filename": "cookies_audit.json",
+      "relative_path": "evidence/weblayer/20260919_094101/cookies_audit.json",
+      "sha256": "783b4cca939b493b8e12982492dbdfae97f88c1ebd0a7402feeefee8cf4675c5",
+      "size_bytes": 82,
+      "saved_at": "2026-09-19T09:41:12.959313"
+    },
+    {
+      "module": "weblayer",
+      "filename": "sqli_pilot_probe.json",
+      "relative_path": "evidence/weblayer/20260919_094101/sqli_pilot_probe.json",
+      "sha256": "486624eb875d2e3ad46a304e51f5230a688ae985c837a75f02b11085bf8c300d",
+      "size_bytes": 4963,
+      "saved_at": "2026-09-19T09:41:13.165101"
+    },
+    {
+      "module": "weblayer",
+      "filename": "admin_access_probe.json",
+      "relative_path": "evidence/weblayer/20260919_094101/admin_access_probe.json",
+      "sha256": "3b9027921109209523e22a521275024566b12544f09a60110d9551b99710b3d7",
+      "size_bytes": 1800,
+      "saved_at": "2026-09-19T09:41:13.268813"
+    },
+    {
+      "module": "infra",
+      "filename": "dbports_socket.json",
+      "relative_path": "evidence/infra/20260919_094101/dbports_socket.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "saved_at": "2026-09-19T09:41:25.278438"
+    },
+    {
+      "module": "infra",
+      "filename": "web_secrets_probe.json",
+      "relative_path": "evidence/infra/20260919_094101/web_secrets_probe.json",
+      "sha256": "18939230dcb59645d1ffaded19042cb40134b794b2f862192c604c12b2f123ce",
+      "size_bytes": 65,
+      "saved_at": "2026-09-19T09:41:25.339155"
+    },
+    {
+      "module": "infra",
+      "filename": "crawler_directives.json",
+      "relative_path": "evidence/infra/20260919_094101/crawler_directives.json",
+      "sha256": "e836a767d2fe540d219a88ae907c05a9d275713b5f0410fa6a3f65e555230a05",
+      "size_bytes": 70,
+      "saved_at": "2026-09-19T09:41:25.433629"
+    },
+    {
+      "module": "supply",
+      "filename": "dependency_audit.json",
+      "relative_path": "evidence/supply/20260919_094101/dependency_audit.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "saved_at": "2026-09-19T09:41:25.435711"
+    },
+    {
+      "module": "supply",
+      "filename": "frontend_supply_chain.json",
+      "relative_path": "evidence/supply/20260919_094101/frontend_supply_chain.json",
+      "sha256": "4c277eb048411bf947c1ca138a8637904943c4ac78e831091010052e2bee83ca",
+      "size_bytes": 159,
+      "saved_at": "2026-09-19T09:41:25.507423"
+    },
+    {
+      "module": "supply",
+      "filename": "cve_analysis.json",
+      "relative_path": "evidence/supply/20260919_094101/cve_analysis.json",
+      "sha256": "6a99c216dca567fdfe720ca219184075642224e945a2db263b0d05391cdce494",
+      "size_bytes": 101,
+      "saved_at": "2026-09-19T09:41:25.507908"
+    },
+    {
+      "module": "supply",
+      "filename": "cms_status.txt",
+      "relative_path": "evidence/supply/20260919_094101/cms_status.txt",
+      "sha256": "00a4d3b33e34a5ebb556890ca709e08ee644a0cf35254073e5d3730a0f848540",
+      "size_bytes": 46,
+      "saved_at": "2026-09-19T09:41:25.508318"
+    }
+  ]
+}

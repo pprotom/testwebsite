@@ -1,0 +1,26 @@
+[
+  {
+    "port": 80,
+    "protocol": "tcp",
+    "service": "open-socket",
+    "version": "unknown"
+  },
+  {
+    "port": 443,
+    "protocol": "tcp",
+    "service": "open-socket",
+    "version": "unknown"
+  },
+  {
+    "port": 8080,
+    "protocol": "tcp",
+    "service": "open-socket",
+    "version": "unknown"
+  },
+  {
+    "port": 8443,
+    "protocol": "tcp",
+    "service": "open-socket",
+    "version": "unknown"
+  }
+]

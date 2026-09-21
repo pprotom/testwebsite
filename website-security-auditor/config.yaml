@@ -1,0 +1,66 @@
+# ==============================================================================
+# website-security-auditor: Configuration File
+# กำหนดค่าการตรวจสอบความปลอดภัยของเว็บไซต์ (ค่าเริ่มต้นอยู่ในโหมดปลอดภัย Safe Mode)
+# ==============================================================================
+
+target:
+  # URL เป้าหมายหลักที่ต้องการตรวจสอบ (ต้องระบุโปรโตคอล http:// หรือ https://)
+  url: "https://example.com"
+
+  # โดเมนหลัก (ใช้สำหรับ recon, DNS resolution และ TLS check)
+  domain: "example.com"
+
+  # ขอบเขตโดเมนและ IP ที่ได้รับอนุญาต (Scope Whitelist)
+  # ระบบจะปฏิเสธการสแกนและแจ้งเตือน Warning ทันทีหากเป้าหมายอยู่นอก scope นี้
+  allowed_domains:
+    - "example.com"
+    - "www.example.com"
+
+  # (ไม่บังคับ) URL หน้าล็อกอิน สำหรับตรวจสอบความปลอดภัยของ Cookie (Secure, HttpOnly, SameSite)
+  login_url: ""
+
+  # (ไม่บังคับ) รายการ parameter ที่ต้องการทดสอบ SQLi pilot แบบ non-destructive
+  # หากว่าง ระบบจะทดสอบกับ query parameters เริ่มต้น
+  test_params:
+    - "id"
+    - "cat"
+    - "query"
+
+  # (ไม่บังคับ) Path ไปยัง Source Code Repository ในเครื่อง สำหรับรัน TruffleHog สแกนหา Secret ที่หลุด
+  repo_path: ""
+
+execution:
+  # โหมดปลอดภัย (Safe Mode): ค่าเริ่มต้นเป็น true
+  # ป้องกันการรันคำสั่งเชิงรุก (Aggressive / Destructive)
+  safe_mode: true
+
+  # รายการเครื่องมือเสี่ยงที่ได้รับอนุญาตให้รัน (ต้องระบุชื่อเครื่องมือชัดเจน เช่น 'sqlmap', 'nikto')
+  # จะมีผลเมื่อเปิดผ่าน CLI flag --allow-risky หรือระบุในรายการนี้
+  allow_risky: []
+
+  # เวลาจำกัดสูงสุดต่อคำสั่ง (หน่วยเป็นวินาที ต้อง <= 60 ตามข้อกำหนดความปลอดภัย)
+  command_timeout: 60
+
+  # จำนวนคำสั่ง/งานที่รันคู่ขนานสูงสุด (ไม่เกิน 3 เพื่อป้องกันการรบกวนระบบเป้าหมาย)
+  max_concurrency: 3
+
+  # ขีดจำกัดจำนวนพอร์ตที่อนุญาตให้สแกน (หากเกิน 1000 พอร์ต ระบบจะต้องได้รับการยืนยันก่อน)
+  port_scan_limit: 1000
+
+  # ยืนยันการสแกนเกิน 1000 พอร์ตหรือไม่ (true/false)
+  confirm_large_port_scan: false
+
+proxy:
+  # HTTP Proxy (เว้นว่างเพื่อใช้ค่าจาก environment HTTP_PROXY หรือไม่ใช้ proxy)
+  http_proxy: ""
+
+  # HTTPS Proxy (เว้นว่างเพื่อใช้ค่าจาก environment HTTPS_PROXY หรือไม่ใช้ proxy)
+  https_proxy: ""
+
+evidence:
+  # ไดเรกทอรีหลักสำหรับจัดเก็บหลักฐานดิบ (Raw Evidence) แยกตามโมดูลและ timestamp
+  base_dir: "evidence"
+
+report:
+  # ไดเรกทอรีสำหรับบันทึกรายงานผลลัพธ์ (Markdown และ JSON)
+  output_dir: "."

@@ -1,0 +1,316 @@
+{
+  "domain": "example.com",
+  "date": "2026-09-19 09:38:48",
+  "verdict": "NOT PASS",
+  "coverage_pct": 79.17,
+  "summary": {
+    "pass": 16,
+    "fail": 2,
+    "unknown": 6,
+    "total": 24
+  },
+  "items": [
+    {
+      "id": "1.1",
+      "module": "recon",
+      "check": "Domain and IP Scope Verification",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/recon/20260919_093848/dns_resolve.json"
+      ],
+      "note": "Domain example.com resolved to 104.20.23.154 (Verified in scope)"
+    },
+    {
+      "id": "1.2",
+      "module": "recon",
+      "check": "Standard Port Exposure Assessment",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/recon/20260919_093848/ports_fallback.json"
+      ],
+      "note": "Discovered 4 open ports"
+    },
+    {
+      "id": "1.3",
+      "module": "recon",
+      "check": "Database Service Port Exposure",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/recon/20260919_093848/ports_fallback.json"
+      ],
+      "note": "No database ports exposed to public internet"
+    },
+    {
+      "id": "1.4",
+      "module": "recon",
+      "check": "Subdomain Enumeration & Attack Surface Mapping",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/recon/20260919_093848/subdomains.txt"
+      ],
+      "note": "Identified 1 in-scope subdomains"
+    },
+    {
+      "id": "1.5",
+      "module": "recon",
+      "check": "Web Application Firewall (WAF) Posture",
+      "status": "UNKNOWN",
+      "score": 1,
+      "evidence": [
+        "evidence/recon/20260919_093848/waf.txt"
+      ],
+      "note": "WAF status: UNKNOWN"
+    },
+    {
+      "id": "1.6",
+      "module": "recon",
+      "check": "Web Technology Stack & Fingerprinting",
+      "status": "UNKNOWN",
+      "score": 1,
+      "evidence": [
+        "evidence/recon/20260919_093848/httpx.txt"
+      ],
+      "note": "Detected components: Standard HTTP server"
+    },
+    {
+      "id": "2.1",
+      "module": "files",
+      "check": "Directory Brute-Force & Sensitive File Enumeration",
+      "status": "UNKNOWN",
+      "score": 1,
+      "evidence": [
+        "evidence/files/20260919_093848/dirsearch.txt"
+      ],
+      "note": "Probed sensitive paths (19 targets)"
+    },
+    {
+      "id": "2.2",
+      "module": "files",
+      "check": "Version Control (.git) Exposure",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/files/20260919_093848/sensitive_paths_probe.json"
+      ],
+      "note": "No .git configuration or HEAD files exposed (Properly blocked)"
+    },
+    {
+      "id": "2.3",
+      "module": "files",
+      "check": "Environment Configuration (.env) Exposure",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/files/20260919_093848/sensitive_paths_probe.json"
+      ],
+      "note": "No .env files exposed"
+    },
+    {
+      "id": "2.4",
+      "module": "files",
+      "check": "Database Backups & Archive Dump Exposure",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/files/20260919_093848/sensitive_paths_probe.json"
+      ],
+      "note": "No database backups or archive files exposed"
+    },
+    {
+      "id": "2.5",
+      "module": "files",
+      "check": "Directory Listing Inspection (/uploads/, /)",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/files/20260919_093848/sensitive_paths_probe.json"
+      ],
+      "note": "Directory indexing is disabled"
+    },
+    {
+      "id": "2.6",
+      "module": "files",
+      "check": "Sensitive Administrative & Diagnostic Path Exposure",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/files/20260919_093848/sensitive_paths_probe.json"
+      ],
+      "note": "No unprotected admin endpoints exposed"
+    },
+    {
+      "id": "3.1",
+      "module": "weblayer",
+      "check": "Mandatory Security Headers (CSP, HSTS, XFO, XCTO, Referrer)",
+      "status": "FAIL",
+      "score": 0,
+      "evidence": [
+        "evidence/weblayer/20260919_093848/security_headers_probe.json"
+      ],
+      "note": "Missing or misconfigured security headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, Referrer-Policy"
+    },
+    {
+      "id": "3.2",
+      "module": "weblayer",
+      "check": "HTTP to HTTPS Enforced Redirection",
+      "status": "FAIL",
+      "score": 0,
+      "evidence": [
+        "evidence/weblayer/20260919_093848/http_redirect.json"
+      ],
+      "note": "Insecure connection: HTTP does not redirect to HTTPS (Status 200)"
+    },
+    {
+      "id": "3.3",
+      "module": "weblayer",
+      "check": "Modern TLS Encryption (No TLS 1.0/1.1)",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_093848/tls_ciphers.txt"
+      ],
+      "note": "Modern TLS enforced (No obsolete TLS 1.0/1.1 detected)"
+    },
+    {
+      "id": "3.4",
+      "module": "weblayer",
+      "check": "Session Cookie Security Attributes (Secure, HttpOnly, SameSite)",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_093848/cookies_audit.json"
+      ],
+      "note": "All examined cookies have appropriate security flags or no session cookies set."
+    },
+    {
+      "id": "3.5",
+      "module": "weblayer",
+      "check": "SQL Injection Pilot Non-Destructive Probe",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_093848/sqli_pilot_probe.json"
+      ],
+      "note": "No SQL injection leads or error differentials detected on test parameters."
+    },
+    {
+      "id": "3.6",
+      "module": "weblayer",
+      "check": "Unauthenticated Administrative Interface Access",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/weblayer/20260919_093848/admin_access_probe.json"
+      ],
+      "note": "No unauthenticated admin interface exposure detected."
+    },
+    {
+      "id": "4.1",
+      "module": "infra",
+      "check": "Direct Database Port Exposure (IP Level)",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/infra/20260919_093848/dbports_socket.json"
+      ],
+      "note": "All examined database ports are closed or properly firewalled."
+    },
+    {
+      "id": "4.2",
+      "module": "infra",
+      "check": "Repository Secret & Credential Leak Scan",
+      "status": "UNKNOWN",
+      "score": 1,
+      "evidence": [],
+      "note": "No local repo_path specified in config.yaml for TruffleHog inspection."
+    },
+    {
+      "id": "4.3",
+      "module": "infra",
+      "check": "Search Engine Crawler Directives & Information Disclosure",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/infra/20260919_093848/crawler_directives.json"
+      ],
+      "note": "Indexed 0 disallowed paths and 0 sitemap entries."
+    },
+    {
+      "id": "5.1",
+      "module": "supply",
+      "check": "Package Dependency Vulnerability Audit",
+      "status": "UNKNOWN",
+      "score": 1,
+      "evidence": [
+        "evidence/supply/20260919_093848/dependency_audit.json"
+      ],
+      "note": "No local repository or package manifest (package.json / composer.json) available for automated scanning."
+    },
+    {
+      "id": "5.2",
+      "module": "supply",
+      "check": "Public CVE Vulnerability Analysis on Detected Components",
+      "status": "UNKNOWN",
+      "score": 1,
+      "evidence": [
+        "evidence/supply/20260919_093848/cve_analysis.json"
+      ],
+      "note": "Specific software versions could not be confirmed remotely. Manual audit recommended."
+    },
+    {
+      "id": "5.3",
+      "module": "supply",
+      "check": "CMS Platform Security Audit",
+      "status": "PASS",
+      "score": 2,
+      "evidence": [
+        "evidence/supply/20260919_093848/cms_status.txt"
+      ],
+      "note": "Target does not run WordPress or specialized CMS."
+    }
+  ],
+  "findings": [
+    {
+      "title": "Missing Essential HTTP Security Headers",
+      "severity": "P2",
+      "affected": "https://example.com",
+      "evidence": [
+        "evidence/weblayer/20260919_093848/security_headers_probe.json"
+      ],
+      "reproduce": "curl -sI https://example.com",
+      "impact": "Exposes users to clickjacking, cross-site scripting (XSS), and protocol downgrade attacks.",
+      "remediation": "Implement missing security headers on web server or CDN: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, Referrer-Policy."
+    },
+    {
+      "title": "Unenforced HTTPS Encryption (No Automatic Redirect)",
+      "severity": "P0",
+      "affected": "http://example.com/",
+      "evidence": [
+        "evidence/weblayer/20260919_093848/http_redirect.json"
+      ],
+      "reproduce": "curl -sI http://example.com/",
+      "impact": "Unencrypted HTTP traffic allows man-in-the-middle (MITM) eavesdropping and session hijacking.",
+      "remediation": "Configure 301 redirect from HTTP to HTTPS in server configuration."
+    }
+  ],
+  "limitations": [
+    "Authorized Scope restricted to: example.com, www.example.com",
+    "Command Timeout enforced at <= 60s",
+    "Safe Mode is ACTIVE (non-destructive)",
+    "Port scan capped at 1000 ports without interactive confirmation"
+  ],
+  "commands_run": [
+    "nmap -sV -T4 --top-ports 1000 example.com -oN evidence/recon/20260919_093848/nmap.txt",
+    "subfinder -d example.com -silent > evidence/recon/20260919_093848/subdomains.txt",
+    "httpx -silent -status-code -title -tech-detect -l evidence/recon/20260919_093848/subdomains.txt > evidence/recon/20260919_093848/httpx.txt",
+    "wafw00f https://example.com > evidence/recon/20260919_093848/waf.txt",
+    "whatweb https://example.com > evidence/recon/20260919_093848/whatweb.txt",
+    "dirsearch -u https://example.com -e php,txt,bak,sql,env -t 10 --format plain -o evidence/files/20260919_093848/dirsearch.txt",
+    "nmap --script ssl-enum-ciphers -p 443 example.com -oN evidence/weblayer/20260919_093848/tls_ciphers.txt",
+    "nmap -Pn -sV -p 3306,5432,27017,6379,9200,11211,1433,5984 104.20.23.154 -oN evidence/infra/20260919_093848/dbports.txt"
+  ]
+}

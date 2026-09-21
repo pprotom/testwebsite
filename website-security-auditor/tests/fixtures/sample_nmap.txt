@@ -1,0 +1,11 @@
+# Nmap 7.93 scan initiated Fri Sep 19 09:00:00 2026 as: nmap -sV -T4 --top-ports 1000 example.com
+Nmap scan report for example.com (93.184.216.34)
+Host is up (0.012s latency).
+rDNS record for 93.184.216.34: 93.184.216.34
+
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     nginx 1.18.0
+443/tcp open  ssl/http nginx 1.18.0
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 19 09:00:05 2026 -- 1 IP address (1 host up) scanned in 5.12 seconds

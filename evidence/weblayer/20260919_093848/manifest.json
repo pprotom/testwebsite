@@ -1,0 +1,110 @@
+{
+  "session_timestamp": "20260919_093848",
+  "created_at": "2026-09-19T09:38:48.804871",
+  "files": [
+    {
+      "module": "recon",
+      "filename": "dns_resolve.json",
+      "relative_path": "evidence/recon/20260919_093848/dns_resolve.json",
+      "sha256": "a31f2463b4ad3b468309547576207d8474cb05fb67eb137ec123b6fc71371f3e",
+      "size_bytes": 152,
+      "saved_at": "2026-09-19T09:38:48.825537"
+    },
+    {
+      "module": "recon",
+      "filename": "ports_fallback.json",
+      "relative_path": "evidence/recon/20260919_093848/ports_fallback.json",
+      "sha256": "4ecad3372fe1214f47f6a34648a270b868d76b8927806ede1fe48625ffb3d6e5",
+      "size_bytes": 419,
+      "saved_at": "2026-09-19T09:38:59.853965"
+    },
+    {
+      "module": "recon",
+      "filename": "subdomains.txt",
+      "relative_path": "evidence/recon/20260919_093848/subdomains.txt",
+      "sha256": "9891335b85f63c79455210f7c2ebd15b8417fc2c05872917d0092518aad34759",
+      "size_bytes": 28,
+      "saved_at": "2026-09-19T09:38:59.854929"
+    },
+    {
+      "module": "recon",
+      "filename": "waf.txt",
+      "relative_path": "evidence/recon/20260919_093848/waf.txt",
+      "sha256": "d2e33a398110ceb006b7dae05cc8b0e5111bf6017ada300fc0b1b16313e65e06",
+      "size_bytes": 12,
+      "saved_at": "2026-09-19T09:38:59.856253"
+    },
+    {
+      "module": "recon",
+      "filename": "recon_summary.json",
+      "relative_path": "evidence/recon/20260919_093848/recon_summary.json",
+      "sha256": "478b0f8ccd1a528dd066dc3daf2a3cdfa06c244e686a4e7a090910385f3c2650",
+      "size_bytes": 1259,
+      "saved_at": "2026-09-19T09:38:59.857101"
+    },
+    {
+      "module": "files",
+      "filename": "dirsearch.txt",
+      "relative_path": "evidence/files/20260919_093848/dirsearch.txt",
+      "sha256": "f32bb4fb7df164bc171c28811e6a31577da31ec3a9a788baa2dbf9682d089038",
+      "size_bytes": 155,
+      "saved_at": "2026-09-19T09:38:59.859438"
+    },
+    {
+      "module": "files",
+      "filename": "sensitive_paths_probe.json",
+      "relative_path": "evidence/files/20260919_093848/sensitive_paths_probe.json",
+      "sha256": "ac18b14b805b32944f2a363f39639d72f58e812a115e36aa258cd6f82ab1de7e",
+      "size_bytes": 5408,
+      "saved_at": "2026-09-19T09:39:00.361623"
+    },
+    {
+      "module": "weblayer",
+      "filename": "security_headers_probe.json",
+      "relative_path": "evidence/weblayer/20260919_093848/security_headers_probe.json",
+      "sha256": "c3f82f7a734a9c02abfd03ea31f32a70a1cd6e10dc8487ccaa49b9fd64a1480f",
+      "size_bytes": 1404,
+      "saved_at": "2026-09-19T09:39:00.472413"
+    },
+    {
+      "module": "weblayer",
+      "filename": "http_redirect.json",
+      "relative_path": "evidence/weblayer/20260919_093848/http_redirect.json",
+      "sha256": "780412e716c9a54ccd3df41daaf3191836e821812bbe4457e056d26d5ec4cd5e",
+      "size_bytes": 602,
+      "saved_at": "2026-09-19T09:39:00.494969"
+    },
+    {
+      "module": "weblayer",
+      "filename": "tls_ciphers.txt",
+      "relative_path": "evidence/weblayer/20260919_093848/tls_ciphers.txt",
+      "sha256": "5f23fcbd9ba1793b77b63f5696bcc998057ff447e559ea7d0bfb01866d0513d2",
+      "size_bytes": 45,
+      "saved_at": "2026-09-19T09:39:00.510683"
+    },
+    {
+      "module": "weblayer",
+      "filename": "cookies_audit.json",
+      "relative_path": "evidence/weblayer/20260919_093848/cookies_audit.json",
+      "sha256": "783b4cca939b493b8e12982492dbdfae97f88c1ebd0a7402feeefee8cf4675c5",
+      "size_bytes": 82,
+      "saved_at": "2026-09-19T09:39:00.539498"
+    },
+    {
+      "module": "weblayer",
+      "filename": "sqli_pilot_probe.json",
+      "relative_path": "evidence/weblayer/20260919_093848/sqli_pilot_probe.json",
+      "sha256": "fc8336a8f9248f82e3382a6edaeb6385eafb03b23eb6b524f7be5ab2614eb77b",
+      "size_bytes": 4963,
+      "saved_at": "2026-09-19T09:39:00.723794"
+    },
+    {
+      "module": "weblayer",
+      "filename": "admin_access_probe.json",
+      "relative_path": "evidence/weblayer/20260919_093848/admin_access_probe.json",
+      "sha256": "445dfaed23e7e9dcb84dcfddcbe0a3a7eb26b15527ded738687b1cedb12ad342",
+      "size_bytes": 1800,
+      "saved_at": "2026-09-19T09:39:00.821028"
+    }
+  ]
+}

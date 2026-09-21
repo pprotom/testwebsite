@@ -1,0 +1,19 @@
+{
+  "url": "http://example.com/",
+  "status_code": 200,
+  "location": "",
+  "headers": {
+    "Date": "Sat, 19 Sep 2026 09:26:28 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "cloudflare",
+    "Last-Modified": "Tue, 15 Sep 2026 23:41:26 GMT",
+    "Allow": "GET, HEAD",
+    "cf-cache-status": "HIT",
+    "Age": "4879",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "a3d78c8b4fec4a4b-TPE"
+  },
+  "body_first_100_bytes": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me"
+}

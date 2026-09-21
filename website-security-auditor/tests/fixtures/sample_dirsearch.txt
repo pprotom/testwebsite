@@ -1,0 +1,6 @@
+# Dirsearch started Fri Sep 19 09:00:00 2026
+200   124B   https://example.com/robots.txt
+403   281B   https://example.com/.git/
+404   162B   https://example.com/.env
+404   162B   https://example.com/db.sql
+200   2048B  https://example.com/api/docs

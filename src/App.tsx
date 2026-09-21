@@ -30,6 +30,15 @@ export default function App() {
     allow_risky: [],
     confirm_large_port_scan: false,
     selected_module: 'all',
+    environment: 'production',
+    production_settings: {
+      environment: 'production',
+      rate_limit_rps: 2,
+      read_only_mode: true,
+      excluded_paths: ['/logout', '/api/payment', '/checkout', '/admin/delete', '/api/v1/reset'],
+      custom_audit_header: 'X-Security-Audit: Authorized-Production-Audit-2026',
+      maintenance_window_tag: 'Off-Peak Window (00:00 - 05:00 UTC)',
+    },
   });
 
   const [isScanning, setIsScanning] = useState(false);
@@ -114,6 +123,8 @@ export default function App() {
           safe_mode: config.safe_mode,
           selected_module: config.selected_module,
           allow_risky: config.allow_risky,
+          environment: config.environment,
+          production_settings: config.production_settings,
         }),
       });
 
@@ -123,7 +134,11 @@ export default function App() {
 
       const data = await res.json();
       if (data && data.report) {
-        setReport(data.report);
+        setReport({
+          ...data.report,
+          target_environment: config.environment,
+          production_settings: config.production_settings,
+        });
       }
     } catch (err) {
       console.warn('Live API request failed or took too long, falling back to simulated execution:', err);
@@ -135,6 +150,8 @@ export default function App() {
           target_url: config.url,
           domain: config.domain,
           date: new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC',
+          target_environment: config.environment,
+          production_settings: config.production_settings,
         });
       } else {
         setReport({
@@ -142,6 +159,8 @@ export default function App() {
           target_url: config.url,
           domain: config.domain,
           date: new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC',
+          target_environment: config.environment,
+          production_settings: config.production_settings,
         });
       }
     } finally {

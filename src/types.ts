@@ -52,6 +52,18 @@ export interface OWASPRiskCategory {
   remediationSummary: string;
 }
 
+export type TargetEnvironment = 'production' | 'staging' | 'development';
+
+export interface ProductionAuditSettings {
+  environment: TargetEnvironment;
+  rate_limit_rps: number; // requests per second (e.g. 1, 2, 5, 10)
+  read_only_mode: boolean; // safe read-only methods only (GET/HEAD/OPTIONS)
+  excluded_paths: string[]; // critical endpoints blacklisted from probing
+  custom_audit_header: string; // e.g. X-Security-Audit: Authorized-Production-Audit
+  maintenance_window_tag: string; // e.g. "Off-Peak Window (00:00 - 05:00)"
+  waf_bypass_token?: string; // optional SOC/WAF authorization token
+}
+
 export interface AuditReport {
   id: string;
   target_url: string;
@@ -61,6 +73,8 @@ export interface AuditReport {
   verdict: AuditVerdict;
   coverage_pct: number;
   safe_mode: boolean;
+  target_environment?: TargetEnvironment;
+  production_settings?: ProductionAuditSettings;
   summary: {
     pass: number;
     fail: number;
@@ -96,4 +110,6 @@ export interface AuditConfigInput {
   allow_risky: string[];
   confirm_large_port_scan: boolean;
   selected_module?: 'all' | 'recon' | 'files' | 'weblayer' | 'infra' | 'supply';
+  environment: TargetEnvironment;
+  production_settings: ProductionAuditSettings;
 }

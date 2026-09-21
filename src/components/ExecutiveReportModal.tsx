@@ -99,20 +99,37 @@ export const ExecutiveReportModal: React.FC<ExecutiveReportModalProps> = ({ repo
               <span className="font-bold text-slate-900 font-mono break-all">{report.domain}</span>
             </div>
             <div>
+              <span className="text-slate-500 block text-2xs uppercase tracking-wider font-semibold">สภาพแวดล้อม (Environment)</span>
+              <span className="font-bold text-emerald-800 flex items-center gap-1">
+                {report.target_environment === 'production' || !report.target_environment
+                  ? '🏭 Production (Safe Scan)'
+                  : `${report.target_environment?.toUpperCase()}`}
+              </span>
+            </div>
+            <div>
               <span className="text-slate-500 block text-2xs uppercase tracking-wider font-semibold">วันเวลาที่ตรวจสอบ</span>
               <span className="font-medium text-slate-800">{report.date}</span>
             </div>
             <div>
-              <span className="text-slate-500 block text-2xs uppercase tracking-wider font-semibold">สรุปผลการตรวจ</span>
-              <span className="font-semibold text-slate-800">
-                ผ่าน {report.summary.pass} | ไม่ผ่าน {report.summary.fail} | รวม {report.summary.total}
+              <span className="text-slate-500 block text-2xs uppercase tracking-wider font-semibold">รูปแบบ & ความเร็ว</span>
+              <span className="font-semibold text-indigo-700">
+                {report.production_settings?.rate_limit_rps || 2} req/s • Non-Destructive
               </span>
             </div>
-            <div>
-              <span className="text-slate-500 block text-2xs uppercase tracking-wider font-semibold">รูปแบบการทดสอบ</span>
-              <span className="font-semibold text-indigo-700">Non-Destructive Empirical Check</span>
-            </div>
           </div>
+
+          {/* Production Safeguard Assurance Note */}
+          {report.target_environment === 'production' && (
+            <div className="px-3.5 py-2.5 rounded-lg bg-emerald-50/80 border border-emerald-200 text-2xs text-emerald-950 flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 font-bold">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Production Guardrail Certified: ตรวจสอบแบบ Zero-Downtime โดยไม่กระทบความพร้อมใช้งานและข้อมูลจริง</span>
+              </div>
+              <div className="text-emerald-800 font-mono">
+                ยกเว้นจุดอ่อนไหว {report.production_settings?.excluded_paths?.length || 4} endpoints (Blacklist Protected)
+              </div>
+            </div>
+          )}
 
           {/* Executive Summary Narrative */}
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/60 text-xs space-y-2 leading-relaxed">

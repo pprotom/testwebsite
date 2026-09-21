@@ -102,6 +102,8 @@ async function startServer() {
       safe_mode = true,
       selected_module = 'all',
       allow_risky = [],
+      environment = 'production',
+      production_settings,
     } = req.body;
 
     if (!url || typeof url !== 'string') {
@@ -126,6 +128,14 @@ async function startServer() {
     const timestamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 15);
     const tempConfigPath = path.join(reportsDir, `config_${timestamp}.yaml`);
 
+    const prodRps = production_settings?.rate_limit_rps || 2;
+    const prodReadOnly = production_settings?.read_only_mode !== false;
+    const prodExcluded = Array.isArray(production_settings?.excluded_paths)
+      ? production_settings.excluded_paths
+      : ['/logout', '/api/payment', '/checkout', '/admin/delete'];
+    const prodHeader = production_settings?.custom_audit_header || 'X-Security-Audit: Authorized-Production-Audit-2026';
+    const prodWindow = production_settings?.maintenance_window_tag || 'Off-Peak Window';
+
     const yamlContent = `
 target:
   url: "${url}"
@@ -138,11 +148,20 @@ ${cleanAllowed.map((d) => `    - "${d}"`).join('\n')}
     - "query"
   repo_path: ""
 
+environment: "${environment}"
+production:
+  rate_limit_rps: ${prodRps}
+  read_only_mode: ${prodReadOnly ? 'true' : 'false'}
+  excluded_paths:
+${prodExcluded.map((p: string) => `    - "${p}"`).join('\n')}
+  audit_header: "${prodHeader}"
+  maintenance_window: "${prodWindow}"
+
 execution:
   safe_mode: ${safe_mode ? 'true' : 'false'}
   allow_risky: [${allow_risky.map((r: string) => `"${r}"`).join(', ')}]
   command_timeout: 45
-  max_concurrency: 3
+  max_concurrency: ${environment === 'production' ? 1 : 3}
   port_scan_limit: 1000
   confirm_large_port_scan: false
 
@@ -273,6 +292,15 @@ report:
           `curl -s -f -o /dev/null "${url}/.env"`,
         ],
         safe_mode,
+        target_environment: environment,
+        production_settings: {
+          environment,
+          rate_limit_rps: prodRps,
+          read_only_mode: prodReadOnly,
+          excluded_paths: prodExcluded,
+          custom_audit_header: prodHeader,
+          maintenance_window_tag: prodWindow,
+        },
       };
 
       return res.json({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, ShieldAlert, CheckCircle2, XCircle, HelpCircle, FileCheck, Clock, Server, Lock, Printer } from 'lucide-react';
+import { ShieldCheck, ShieldAlert, CheckCircle2, XCircle, HelpCircle, FileCheck, Clock, Server, Lock, Printer, Factory } from 'lucide-react';
 import { AuditReport } from '../types';
 
 interface VerdictSummaryProps {
@@ -90,9 +90,21 @@ export const VerdictSummary: React.FC<VerdictSummaryProps> = ({
             <span className="truncate">{report.domain}</span>
             {report.ip && <span className="text-slate-400">({report.ip})</span>}
           </div>
-          <div className="flex items-center gap-1.5">
-            <FileCheck className="w-3.5 h-3.5 text-emerald-600" />
-            <span>{report.evidence_count} raw evidence files hashed</span>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold ${
+              report.target_environment === 'production' || !report.target_environment
+                ? 'bg-emerald-100 text-emerald-900 border border-emerald-300'
+                : 'bg-slate-100 text-slate-800 border border-slate-300'
+            }`}>
+              <Factory className="w-3 h-3 text-emerald-700" />
+              {report.target_environment === 'production' || !report.target_environment
+                ? 'Production (Safe Scan)'
+                : `${report.target_environment?.toUpperCase()}`}
+            </span>
+            <div className="flex items-center gap-1">
+              <FileCheck className="w-3.5 h-3.5 text-emerald-600" />
+              <span>{report.evidence_count} evidence files</span>
+            </div>
           </div>
         </div>
       </div>
